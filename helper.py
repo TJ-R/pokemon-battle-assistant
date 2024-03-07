@@ -1,5 +1,7 @@
 import csv_readers
 
 
-def getMovesList():
-    print("test")
+def printParty(party):
+    count = 1
+    for pokemon in party:
+        print(f"{count}. {pokemon.name}")
