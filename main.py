@@ -40,6 +40,13 @@ def main():
 
         elif command.lower() == "r" or command.lower() == "remove":
             print("Enter Remove")
+            if (len(party) == 0):
+                print("Cannot remove party is empty")
+            else:
+                helper.printParty(party)
+                index_to_remove = int(input("Type the number for the pokemon you want to remove: "))
+                removed_pokemon = party.pop(index_to_remove - 1)
+                print(f"Removed {removed_pokemon.name} from the party.")
 
         elif command.lower() == "b" or command.lower() == "battle":
             print("Enter Battle")

@@ -30,6 +30,13 @@ class Pokemon:
 
             elif command.lower() == "r" or command.lower() == "remove":
                 print("Remove Move")
+                if len(self.moves) == 0:
+                    print("There are no moves in the move list")
+                else:
+                    self.printMoves()
+                    index_to_remove = int(input("Enter number for the move you wish to remove: "))
+                    removed_move = self.moves.pop(index_to_remove - 1)
+                    print(f"Removed {removed_move['identifier']} from the list")
 
             elif command.lower() == "v" or command.lower() == "view":
                 self.printMoves()
