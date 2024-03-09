@@ -1,6 +1,7 @@
 import csv_readers
 import helper
 from pokemon import Pokemon
+from battle import startBattle
 
 
 def main():
@@ -50,6 +51,10 @@ def main():
 
         elif command.lower() == "b" or command.lower() == "battle":
             print("Enter Battle")
+            if len(party) == 0:
+                print("Cannot start battle with no pokemon in party")
+            else:
+                startBattle(party, pokemon_dict)
 
         elif command.lower() == "v" or command.lower() == "view":
             helper.printParty(party)
@@ -57,6 +62,9 @@ def main():
         elif command.lower() == "e" or command.lower() == "exit":
             print("Enter Exit")
             running = False
+
+        else:
+            print("Invalid Command: Please choose a command from the menu")
 
         print()
 

@@ -49,7 +49,7 @@ class Pokemon:
                 self.help()
 
             else:
-                print("Not a valid command")
+                print("Invalid Command: Please choose a command from the menu")
 
     def printMoves(self):
         i = 1
