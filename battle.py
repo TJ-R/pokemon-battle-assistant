@@ -1,9 +1,10 @@
 from pokemon import Pokemon
-from helper import printParty
+from helper import printParty, createTypeEfficacyMatrix
 
 
 def startBattle(party, pokemon_dict):
     running = True
+    type_efficacy_matrix = createTypeEfficacyMatrix()
 
     while running:
         print("============= Battle Menu  =============\n")
